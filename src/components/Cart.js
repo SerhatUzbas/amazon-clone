@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { db } from "../firebase";
-import { cartItems, tPrice, uploadCart } from "../store/cartSlice";
-import { selectUserId } from "../store/userSlice";
+import React from "react";
+import { useSelector } from "react-redux";
+import { cartItems, tPrice } from "../store/cartSlice";
 import CartItem from "./CartItem";
 
 function Cart() {

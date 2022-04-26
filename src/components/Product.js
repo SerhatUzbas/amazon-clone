@@ -1,17 +1,6 @@
 import React from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import {
-  addDoc,
-  collection,
-  onSnapshot,
-  orderBy,
-  query,
-  serverTimestamp,
-  setDoc,
-  doc,
-  deleteDoc,
-  updateDoc,
-} from "firebase/firestore";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { useSelector } from "react-redux";
 import { selectUserId } from "../store/userSlice";

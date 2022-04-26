@@ -1,17 +1,15 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import { selectUserName, setLogout, setUser } from "./store/userSlice";
+import { setLogout, setUser } from "./store/userSlice";
 import { auth } from "./firebase";
 import CartPage from "./pages/CartPage";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import ProtectedRoutes from "./pages/ProtectedRoutes";
 
 function App() {
   const dispatch = useDispatch();
-  const username = useSelector(selectUserName);
   let navigate = useNavigate();
 
   useEffect(() => {
