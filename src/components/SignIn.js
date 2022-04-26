@@ -11,8 +11,6 @@ function SignIn() {
   const logIn = () => {
     auth.signInWithPopup(provider).then((result) => {
       if (result) {
-        console.log(result);
-
         dispatch(
           setUser({
             userName: result.user.displayName,

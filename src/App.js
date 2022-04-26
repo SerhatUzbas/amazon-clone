@@ -24,11 +24,9 @@ function App() {
           })
         );
         navigate(url);
-        console.log(authuser);
       } else {
         dispatch(setLogout());
         navigate("/Login");
-        console.log(authuser);
       }
     });
   }, []);

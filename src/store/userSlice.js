@@ -19,7 +19,9 @@ const userSlice = createSlice({
       state.user.userUid = action.payload.userUid;
     },
     setLogout(state, action) {
-      state.user = false;
+      state.user.userName = false;
+      state.user.userEmail = false;
+      state.user.userUid = false;
     },
   },
 });

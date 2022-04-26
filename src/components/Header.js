@@ -31,7 +31,6 @@ function Header() {
     db.collection(`${userId}`).onSnapshot((snapshot) =>
       dispatch(uploadCart(snapshot))
     );
-    console.log(cartList);
   }, [userId]);
 
   const [higlighted, setHighligted] = useState(false);

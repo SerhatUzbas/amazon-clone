@@ -11,7 +11,7 @@ function Product({ item }) {
   const items = useSelector(cartItems);
   const addItemToCart = async () => {
     const existedItem = items.find((listitem) => listitem.data.id === item.id);
-    console.log(existedItem);
+
     if (existedItem) {
       const existedItemRef = doc(db, `${userId}`, `${existedItem.id}`);
       await updateDoc(existedItemRef, {
